@@ -1,2 +1,2 @@
 # lab3
-this is a reprository, wchich is having my lab 3 main.c code inside.
+my lab. work was to make a bubble sort of massive of words and make a program able to check if letters are same or not.
