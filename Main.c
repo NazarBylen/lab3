@@ -31,17 +31,15 @@ void sort (char* string, int count) {
     }
 }
 
-int isIsogram(char* string,int count) {
+_Bool isIsogram(char* string,int count) {
     int result = 0;
 
     for (int i = 0; i < count; i++) {
         if (string[i] == string[i + 1]) {
             result = 1;
             break;
-        }return result;
+        }return true;
     }
-
-
 }
 
 
