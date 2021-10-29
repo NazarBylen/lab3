@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 
-char toLowerCase(char *string, int count) {
+void transformingToLowerCase(char *string, int count) {
     for (int i = 0;i<count; i++) {
         string[i] = tolower(string[i]);
     }
@@ -37,10 +38,10 @@ int isIsogram(char* string,int count) {
         if (string[i] == string[i + 1]) {
             result = 1;
             break;
-        }
+        }return result;
     }
 
-    return result;
+
 }
 
 
@@ -55,14 +56,14 @@ void main() {
     int count = strlen(words);
 
     toLowerCase(words, count);
-    
+
     printf("string in lower case: %s\n", words);
 
     sort(words, count);
 
-    
+
     printf("sorted string: %s\n", words);
-  
-    printf(isIsogram(words, count) == 0 ? "Isogram" : "NOT Isogram");
+
+    printf(isIsogram(words, count) == false ? "Isogram" : "NOT Isogram");
 }
 
