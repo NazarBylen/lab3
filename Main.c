@@ -42,8 +42,7 @@ _Bool isIsogram(char* string,int count) {
     }
 }
 
-
-void main() {
+int main() {
 
     char words[100];
 
@@ -53,7 +52,7 @@ void main() {
 
     int count = strlen(words);
 
-    toLowerCase(words, count);
+    transformingToLowerCase(words, count);
 
     printf("string in lower case: %s\n", words);
 
@@ -63,5 +62,7 @@ void main() {
     printf("sorted string: %s\n", words);
 
     printf(isIsogram(words, count) == false ? "Isogram" : "NOT Isogram");
+
+    return 0;
 }
 
